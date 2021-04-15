@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_address.c                                 :+:      :+:    :+:   */
+/*   ft_display_p.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alafranc <alafranc@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cnavone <cnavone@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/10 17:19:53 by alafranc          #+#    #+#             */
-/*   Updated: 2020/12/16 14:04:34 by alafranc         ###   ########lyon.fr   */
+/*   Created: 2021/04/11 07:05:06 by cnavone           #+#    #+#             */
+/*   Updated: 2021/04/15 07:14:18 by cnavone          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	size_nb_base(unsigned long long nb, int base)
 	return (count);
 }
 
-int	ft_print_address(va_list ap, t_flags flags)
+int	ft_print_address(va_list ap, t_struct mastruct)
 {
 	unsigned long long	addr;
 	int					count;

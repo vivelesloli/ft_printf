@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_characters.c                              :+:      :+:    :+:   */
+/*   ft_display.c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alafranc <alafranc@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cnavone <cnavone@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/10 17:20:14 by alafranc          #+#    #+#             */
-/*   Updated: 2020/12/16 11:32:23 by alafranc         ###   ########lyon.fr   */
+/*   Created: 2021/04/11 09:01:10 by cnavone           #+#    #+#             */
+/*   Updated: 2021/04/15 07:15:36 by cnavone          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,22 @@ int	ft_print_char(va_list ap, t_flags flags)
 		count += ft_display_space(flags.lmc - 1);
 		count += ft_putchar_1(c);
 	}
+	return (count);
+}
+
+int	ft_display_percent(t_struct mastruct)
+{
+	int	count;
+
+	count = 0;
+	if (flags.space_reverse)
+		flags.display_zero = 0;
+	if (!flags.space_reverse && !flags.display_zero)
+		count += ft_display_space(flags.lmc - 1);
+	if (flags.display_zero && flags.lmc > 1)
+		count += ft_display_zero(flags.lmc - 1);
+	count += ft_putchar_1('%');
+	if (flags.space_reverse && !flags.display_zero)
+		count += ft_display_space(flags.lmc - 1);
 	return (count);
 }

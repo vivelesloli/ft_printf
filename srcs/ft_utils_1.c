@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alafranc <alafranc@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: cnavone <cnavone@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/15 10:44:05 by alafranc          #+#    #+#             */
-/*   Updated: 2020/12/15 10:44:11 by alafranc         ###   ########lyon.fr   */
+/*   Created: 2021/04/11 07:06:11 by cnavone           #+#    #+#             */
+/*   Updated: 2021/04/11 07:06:13 by cnavone          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
