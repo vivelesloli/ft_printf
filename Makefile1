@@ -1,0 +1,54 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cnavone <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/06/20 11:01:43 by cnavone           #+#    #+#              #
+#    Updated: 2021/06/20 11:01:46 by cnavone          ###   ########lyon.fr    #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	= libftprintf.a
+
+SRCS	= 	ft_display.c \
+			ft_parse.c \
+			ft_print_adress.c \
+			ft_print_decimal.c \
+			ft_print_rate.c \
+			ft_print_unsigned.c \
+			ft_putnbr_hexa.c \
+			ft_printf.c \
+			ft_utils.c 
+
+OBJS	= $(SRCS:.c=.o)
+
+CC		= gcc
+
+CFLAGS	= -Wall -Wextra -Werror
+
+RM		= rm -rf
+
+HEADER	=	ft_printf.h
+
+HFLAG	=	-I $(HEADER)
+
+%.o: %.c $(HEADER)
+	gcc $(CFLAGS) $(HFLAG) -o $@ -c $<
+
+$(NAME):	$(OBJS)
+		ar -rc $(NAME) $(OBJS)
+		ranlib $(NAME)
+
+all:	$(NAME)
+
+clean:	
+		$(RM) $(OBJS)
+		$(RM) $(NAME) 
+
+fclean:	clean
+
+re:		fclean all
+
+.PHONY:	all clean fclean re
